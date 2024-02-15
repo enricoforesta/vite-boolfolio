@@ -5,6 +5,7 @@ export default {
   name: 'App',
   data() {
     return {
+      projects: [],
       Url: 'http://127.0.0.1:8000',
       apiUrls: {
         projects: '/api/project'
@@ -18,7 +19,8 @@ export default {
     // chiamata axios
     getProjects() {
       axios.get(this.Url + this.apiUrls.projects).then(response => {
-        console.log(response)
+        console.log(response.data);
+        return this.projects = response.data;
       }).catch(error => {
         console.log(error)
       })
@@ -31,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <AppContent />
+  <AppContent :projects="projects" />
 </template>
 
 <style scoped></style>
