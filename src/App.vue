@@ -15,6 +15,7 @@ export default {
     AppContent
   },
   methods: {
+    // chiamata axios
     getProjects() {
       axios.get(this.Url + this.apiUrls.projects).then(response => {
         console.log(response)
