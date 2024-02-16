@@ -29,6 +29,7 @@ export default {
                         <p class="card-text" v-if=project.description>Descrizione: {{ project.description }}</p>
                         <p class="card-text" v-if=project.status>Stato: {{ project.status }}</p>
                         <p class="card-text" v-if=project.start_date>Data d'inizio: {{ project.start_date }}</p>
+                        <p class="card-text" v-if=project.type_id>Tipo: {{ project.type_id }}</p>
                         <a href="#" class="btn btn-primary">Visualizza progetto</a>
                     </div>
                 </div>
